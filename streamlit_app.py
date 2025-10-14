@@ -1,13 +1,16 @@
 import streamlit as st
 
-adrt=st.query_params["first_key"]
-st.title(adrt)
 
+st.title("Заявка")
+
+adrt=st.query_params["first_key"]
+st.header(adrt)
+st.badge(adrt, color="blue")
 
 if st.query_params["first_key"] == "1":
     st.title("нашел")
 
-st.title("Заявка")
+
 order_types_names=["корпоративная карта","мне на ИП/СЗ","по счету или договору др. юр.лица"]
 order_type=st.radio("**Тип оплаты:**",order_types_names,index=None,help="нельзя в одной заявке использовать разные типы оплат",horizontal=True)
 if order_type == "корпоративная карта":
@@ -27,4 +30,7 @@ else:
     st.markdown(
         ":orange-badge[⚠️ необходимо заполнить] "
     )
+
+
+
 
