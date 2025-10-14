@@ -3,8 +3,6 @@ st.logo("Логотип1.jpg",size ="large",link="https://lazydog.tv/")
 st.title("Заявка")
 adrt = st.query_params["first_key"]
 st.badge(adrt, color="blue")
-if st.query_params["first_key"] == "1":
-    st.title("нашел")
 
 with st.container(border=True):
     order_types_names = ["корпоративная карта", "мне на ИП/СЗ", "счету или договору др. юр.лица"]
