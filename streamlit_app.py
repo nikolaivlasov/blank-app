@@ -1,5 +1,5 @@
 import streamlit as st
-
+st.logo("Логотип1.jpg",size ="large")
 st.title("Заявка")
 adrt = st.query_params["first_key"]
 st.badge(adrt, color="blue")
