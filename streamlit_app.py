@@ -22,11 +22,11 @@ def next_page():
 if st.session_state.page == 1:
     with st.container(border=True):
         # Display avatar
-        st.image(avatar_master, caption="Мастер", width=200, clamp=True)
+        st.image(avatar_master, caption="Мастер", width=180, clamp=True)
         st.markdown('Привет, Алена! Немного магии?')
 
     with st.container(border=True):
-        st.image(photo_from_tg_player, width=200, clamp=True)
+        st.image(photo_from_tg_player, width=180, clamp=True)
         if 'clicked' not in st.session_state:
             st.session_state.clicked = False
 
@@ -43,7 +43,7 @@ if st.session_state.page == 1:
 elif st.session_state.page == 2:
     with st.container(border=True):
         # Display avatar
-        st.image(avatar_master, caption="Мастер", width=200)
+        st.image(avatar_master, caption="Мастер", width=180)
         st.markdown('Так, так... мы посмотрели твои воспоминания из поездки. Какой образ твой?')
 
     with st.container(border=True):
@@ -78,13 +78,13 @@ elif st.session_state.page == 2:
 elif st.session_state.page == 3:
     with st.container(border=True):
         # Display avatar
-        st.image(avatar_master, caption="Мастер", width=200)
+        st.image(avatar_master, caption="Мастер", width=180)
         st.markdown('Ma chérie, ты великолепна!!!')
         st.markdown('А теперь первое задание..загляни внутрь себя:')
         st.markdown('Как думаешь, какой твой основной язык любви?')
 
     with st.container(border=True):
-        st.image(st.session_state["selected_image_path"], width=200, clamp=True)
+        st.image(st.session_state["selected_image_path"], width=180, clamp=True)
 
         buttons = ["Помощь", "Слова", "Подарки", "Время вместе", "Прикосновения"]
 
@@ -107,7 +107,7 @@ elif st.session_state.page == 3:
 
 elif st.session_state.page == 4:
     with st.container(border=True):
-        st.image(avatar_master, caption="Мастер", width=200)
+        st.image(avatar_master, caption="Мастер", width=180)
         st.markdown('Ma chérie, поздравляю ! Первый сундучок твой!!!')
 
     with st.container(border=True):
@@ -128,14 +128,14 @@ elif st.session_state.page == 4:
                     next_page()
 elif st.session_state.page == 5:
     with st.container(border=True):
-        st.image(avatar_master, caption="Мастер", width=200)
+        st.image(avatar_master, caption="Мастер", width=180)
         st.markdown('Приятного просмотра!')
 
     with st.container(border=True):
-        st.image("present_1.jpg", caption="Поход в кино", width=300)
+        st.image("present_1.jpg", caption="Поход в кино", width=600)
 
     with st.container(border=True):
-        st.image(st.session_state["selected_image_path"], width=200, clamp=True)
+        st.image(st.session_state["selected_image_path"], width=180, clamp=True)
         if 'clicked' not in st.session_state:
             st.session_state.clicked = False
 
@@ -149,12 +149,16 @@ elif st.session_state.page == 5:
             next_page()
 elif st.session_state.page == 6:
     with st.container(border=True):
-        st.image(avatar_master, caption="Мастер", width=200)
+        st.image(avatar_master, caption="Мастер", width=180)
         st.markdown('Шазам! ... и ужин!')
 
     with st.container(border=True):
-        st.image("about.jpg", width=400)
+        st.image("about.jpg", width=600)
             # The message and nested widget will remain on the page
+
+
+
+
 
 
 
