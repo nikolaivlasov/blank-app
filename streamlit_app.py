@@ -132,7 +132,7 @@ elif st.session_state.page == 5:
         st.markdown('Приятного просмотра!')
 
     with st.container(border=True):
-        st.image("present_1.jpg", caption="Поход в кино", width=200)
+        st.image("present_1.jpg", caption="Поход в кино", width=300)
 
     with st.container(border=True):
         st.image(st.session_state["selected_image_path"], width=200, clamp=True)
