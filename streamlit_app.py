@@ -132,7 +132,7 @@ elif st.session_state.page == 5:
         st.markdown('Приятного просмотра!')
 
     with st.container(border=True):
-        st.image("present_1.jpg", caption="Поход в кино", width=600)
+        st.image("present_1.jpg", caption="Поход в кино", width=400)
 
     with st.container(border=True):
         st.image(st.session_state["selected_image_path"], width=200, clamp=True)
@@ -153,7 +153,7 @@ elif st.session_state.page == 6:
         st.markdown('Шазам! ... и ужин!')
 
     with st.container(border=True):
-        st.image("about.jpg", width=600)
+        st.image("about.jpg", width=400)
             # The message and nested widget will remain on the page
 
 
