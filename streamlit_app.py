@@ -1,4 +1,3 @@
-
 import streamlit as st
 
 images = [
@@ -20,13 +19,16 @@ def next_page():
     st.session_state.page += 1
 
 if st.session_state.page == 1:
-    with st.container(border=True):
+
         # Display avatar
-        st.image(avatar_master, caption="Мастер", width=180, clamp=True)
+    st.image(avatar_master, caption="Мастер", width=180, clamp=True)
+    with st.container(border=True):
         st.markdown('Привет, Алена! Немного магии?')
 
+
+    st.image(photo_from_tg_player, width=180, clamp=True)
+
     with st.container(border=True):
-        st.image(photo_from_tg_player, width=180, clamp=True)
         if 'clicked' not in st.session_state:
             st.session_state.clicked = False
 
@@ -41,9 +43,10 @@ if st.session_state.page == 1:
             # The message and nested widget will remain on the page
 
 elif st.session_state.page == 2:
-    with st.container(border=True):
+
         # Display avatar
-        st.image(avatar_master, caption="Мастер", width=180)
+    st.image(avatar_master, caption="Мастер", width=180)
+    with st.container(border=True):
         st.markdown('Так, так... мы посмотрели твои воспоминания из поездки. Какой образ твой?')
 
     with st.container(border=True):
@@ -76,16 +79,17 @@ elif st.session_state.page == 2:
             next_page()
 
 elif st.session_state.page == 3:
-    with st.container(border=True):
+
         # Display avatar
-        st.image(avatar_master, caption="Мастер", width=180)
+    st.image(avatar_master, caption="Мастер", width=180)
+    with st.container(border=True):
         st.markdown('Ma chérie, ты великолепна!!!')
         st.markdown('А теперь первое задание..загляни внутрь себя:')
         st.markdown('Как думаешь, какой твой основной язык любви?')
 
-    with st.container(border=True):
-        st.image(st.session_state["selected_image_path"], width=180, clamp=True)
 
+    st.image(st.session_state["selected_image_path"], width=180, clamp=True)
+    with st.container(border=True):
         buttons = ["Помощь", "Слова", "Подарки", "Время вместе", "Прикосновения"]
 
         # Верхний ряд - первые 3 кнопки
@@ -155,9 +159,6 @@ elif st.session_state.page == 6:
     with st.container(border=True):
         st.image("about.jpg", width=600)
             # The message and nested widget will remain on the page
-
-
-
 
 
 
