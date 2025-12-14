@@ -1,3 +1,4 @@
+
 import streamlit as st
 
 images = [
@@ -110,8 +111,9 @@ elif st.session_state.page == 3:
             next_page()
 
 elif st.session_state.page == 4:
+    st.image(avatar_master, caption="Мастер", width=180)
     with st.container(border=True):
-        st.image(avatar_master, caption="Мастер", width=180)
+
         st.markdown('Ma chérie, поздравляю ! Первый сундучок твой!!!')
 
     with st.container(border=True):
@@ -131,15 +133,16 @@ elif st.session_state.page == 4:
                 if st.session_state.clicked:
                     next_page()
 elif st.session_state.page == 5:
+    st.image(avatar_master, caption="Мастер", width=180)
     with st.container(border=True):
-        st.image(avatar_master, caption="Мастер", width=180)
+        
         st.markdown('Приятного просмотра!')
 
     with st.container(border=True):
         st.image("present_1.jpg", caption="Поход в кино", width=600)
-
+    st.image(st.session_state["selected_image_path"], width=180, clamp=True)
     with st.container(border=True):
-        st.image(st.session_state["selected_image_path"], width=180, clamp=True)
+
         if 'clicked' not in st.session_state:
             st.session_state.clicked = False
 
@@ -159,6 +162,39 @@ elif st.session_state.page == 6:
     with st.container(border=True):
         st.image("about.jpg", width=600)
             # The message and nested widget will remain on the page
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
